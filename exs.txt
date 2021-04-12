@@ -1,0 +1,6 @@
+Data Structure: Hash Tables
+Sales by Match: https://www.hackerrank.com/challenges/sock-merchant
+Two Strings: https://www.hackerrank.com/challenges/two-strings (Interview Preparation Kit)
+Anagram checker: https://www.codewars.com/kata/529eef7a9194e0cbc1000255/train
+Ransom Note: https://www.hackerrank.com/challenges/ctci-ransom-note (Interview Preparation Kit)
+Game of Thrones - I: https://www.hackerrank.com/challenges/game-of-thrones
