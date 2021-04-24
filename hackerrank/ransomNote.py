@@ -1,27 +1,32 @@
 def checkMagazine(magazine, note):
   magazine = magazine.split(' ')
   note = note.split(' ')
+  words = {}
 
-  for cn in note:
-    steps = 0
-    for index, cm in enumerate(magazine):
-      if cn == cm:
-        magazine[index] = None
-        break
+  for word in magazine:
+    if word in words:
+      words[word] += 1
+    else:
+      words[word] = 1
 
-      if steps == len(magazine) - 1:
-        print('No')
+  for word in note:
+    if word in words:
+      if words[word] <= 0:
+        print('NO')
         return
-
-      steps += 1
-
-  print('Yes')
+      else:
+        words[word] -= 1
+    else:
+      print('NO')
+      return
+  
+  print('YES')
 
 print(checkMagazine('apgo clm w lxkvg mwz elo bg elo lxkvg elo apgo apgo w elo bg', 'elo lxkvg bg mwz clm w')) # no
 # print(checkMagazine('o l x imjaw bee khmla v o v o imjaw l khmla imjaw x', 'imjaw l khmla x imjaw o l l o khmla v bee o o imjaw imjaw o')) # no
 # print(checkMagazine('give me one grand today night', 'give one grand today')) # yes
 # print(checkMagazine('two times three is not four', 'two times two is four')) # no
-# checkMagazine('None me one grand today night', 'give one grand today')
+# print(checkMagazine('None me one grand today night', 'give one grand today'))
 
 # - pelo que eu entendi, a ordem das palavras das duas frases precisam
 # estar na mesma ordem, o que facilita um pouco
